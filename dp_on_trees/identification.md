@@ -17,3 +17,5 @@ problem asks for:
 ->for each node do some O(|number of nodes in subtree|) operations
 
 -> optimize recurseive calls by storing the solutions to the subproblems
+
+So basically -> think of a recrusive solution to the problem and observe if there are any overlapping subproblems?
