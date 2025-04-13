@@ -42,7 +42,7 @@ int main()
     vector<pair<int, int>> op = closest_to_origin(arr, n, k);
     for(int i =0; i < op.size(); i++)
     {
-        cout << '(' << op[i].first << ', ' << op[i].second << ") ";
+        cout << "(" << op[i].first << ", " << op[i].second << ") ";
     }
     cout << endl;
 }
