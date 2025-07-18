@@ -44,6 +44,29 @@ def bfs_visiting_check(adj, V):
     return False
 
 
+def dfs_parent_check(adj, V):
+    visited = [False for _ in range(V)]
+
+    def dfs_helper(node, parent):
+        nonlocal visited, adj
+
+        visited[node] = True
+
+        for nbr in adj[node]:
+            if nbr ==  parent: continue
+            elif visited[nbr]: return True
+            elif dfs_helper(nbr, node): return True
+    
+        return False
+
+
+    for start_node in range(V):
+        if visited[start_node]: continue
+
+        if dfs_helper(start_node, None): return True
+    
+    return False
+        
 
         
 
@@ -59,3 +82,4 @@ if __name__ == "__main__":
 
     print(f'{bfs_parent_check(adj, V)}')
     print(f'{bfs_visiting_check(adj, V)}')
+    print(f'{dfs_parent_check(adj, V)}')
