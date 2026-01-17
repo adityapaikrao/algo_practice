@@ -25,6 +25,12 @@
  * - Search result: Pattern is found in the text.
  */
 
+#include<iostream>
+#include<vector>
+#include<string>
+
+using namespace std;
+
 /**
  * Computes the Longest Prefix Suffix (LPS) array for the given pattern string P.
  * 
@@ -61,11 +67,6 @@ vector<int> getLPS(string& P);
  * @return True if P is found as a substring in T, false otherwise.
  */
 bool KMP(string& P, string& T, vector<int>& lps);
-#include<iostream>
-#include<vector>
-#include<string>
-
-using namespace std;
 
 /**/
 vector<int> getLPS(string& P){
